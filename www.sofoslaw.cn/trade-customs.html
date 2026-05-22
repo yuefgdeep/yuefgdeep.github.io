@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贸易与海关 | 索福思律师事务所 | Sofos |& Partners</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif; line-height: 1.8; color: #333; background-color: #fff; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+      .navbar { background: #1a1a2e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+      .navbar-container { max-width: 1200px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+      .navbar-brand { font-size: 1.4em; font-weight: 300; letter-spacing: 1px; color: white; text-decoration: none; display: flex; align-items: center; gap: 0; }
+      .navbar-brand span { color: white; margin-left: 0; }
+      .navbar-menu { display: flex; list-style: none; gap: 35px; }
+      .navbar-menu a { color: #b0b0b0; text-decoration: none; font-size: 0.95em; transition: color 0.3s ease, border-bottom 0.3s ease; padding-bottom: 5px; border-bottom: 2px solid transparent; }
+      .navbar-menu a:hover { color: #7eb8da; border-bottom-color: #7eb8da; }
+      .navbar-menu a.active { color: #7eb8da; border-bottom-color: #7eb8da; font-weight: 500; }
+      .navbar-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; }
+      .navbar-extras { display: flex; align-items: center; gap: 12px; }
+      .navbar-extras .nav-icon img { height: 20px; display: block; }
+      .navbar-extras .nav-lang { color: #b0b0b0; font-size: 0.95em; text-decoration: none; border-left: 1px solid rgba(255,255,255,0.06); padding-left: 12px; }
+      .navbar-extras .nav-lang:hover { color: #7eb8da; }
+      .navbar-menu li.has-dropdown { position: relative; }
+      .navbar-menu li .dropdown { display: none; position: absolute; top: calc(100% - 2px); left: 0; background: #16213e; padding: 12px 8px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); min-width: 180px; z-index: 50; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s; pointer-events: none; }
+      .navbar-menu li:hover > .dropdown { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
+      .navbar-menu li.open > .dropdown { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
+      .navbar-menu li .dropdown li { padding: 6px 12px; }
+      .navbar-menu li .dropdown li a { color: #dbe6f2; display: block; padding: 6px 0; }
+      .navbar-menu li .chev { font-size: 0.8em; margin-left:6px; color:#b0b0b0 }
+      .section { padding: 60px 0; }
+      .content-section { background: #f8f9fa; padding: 80px 0; }
+      .section-title { font-size: 2.5em; color: #172a5a; margin-bottom: 30px; font-weight: 600; }
+      .intro-text { font-size: 1.05em; line-height: 1.9; color: #555; margin-bottom: 30px; }
+      .content-box { background: white; padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #0f3460; }
+      .content-box p { font-size: 1.05em; line-height: 1.9; color: #555; margin-bottom: 20px; }
+      .content-box p:last-child { margin-bottom: 0; }
+      .services-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 40px; }
+      .service-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+      .service-card h3 { font-size: 1.2em; color: #0f3460; margin-bottom: 20px; font-weight: 600; }
+      .service-card ul { list-style: none; padding: 0; }
+      .service-card li { padding: 10px 0 10px 30px; color: #555; position: relative; border-bottom: 1px solid #eee; }
+      .service-card li:last-child { border-bottom: none; }
+      .service-card li::before { content: "▸"; position: absolute; left: 0; color: #0f3460; font-weight: bold; }
+      .cta-button { margin-top: 50px; text-align: center; }
+      .btn { background: #0f3460; color: white; padding: 15px 40px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; font-size: 1em; }
+      .btn:hover { background: #172a5a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+      .footer { background: #172a5a; padding: 80px 0 40px; color: white; }
+      .footer-divider { border-top: 1px solid rgba(255,255,255,0.15); }
+      .footer-legal a { color: #a4d4f7; text-decoration: none; }
+      @media (max-width: 768px) { .navbar-menu { display: none; } .navbar-toggle { display: block; } .services-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="ch.html" class="navbar-brand">
+          <img src="img/logo/logo.png" alt="Sofoslaw Logo" style="height: 55px; margin-right: 12px;">
+          <span style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-weight: 600; font-size: 1em;">索福思律师事务所</div>
+            <div style="font-size: 0.8em; color: #7eb8da; letter-spacing: 1px;">Sofos |& Partners</div>
+          </span>
+        </a>
+        <ul class="navbar-menu">
+          <li class="has-dropdown">
+            <a href="ch.html#expertise">执业领域 <span class="chev">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="merger.html">并购与重组</a></li>
+              <li><a href="trade-customs.html">贸易与海关</a></li>
+              <li><a href="ip.html">知识产权</a></li>
+              <li><a href="ch.html#expertise-compliance">监管与合规</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="ch.html#team">我们的团队 <span class="chev">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="ch.html#partners">合伙人</a></li>
+              <li><a href="ch.html#associates">律师</a></li>
+            </ul>
+          </li>
+          <li><a href="ch.html#credentials">资质认可</a></li>
+          <li class="has-dropdown">
+            <a href="ch.html#info">索福思资讯 <span class="chev">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="ch.html#cases">新闻资讯</a></li>
+              <li><a href="ch.html#transactions">业绩案例</a></li>
+              <li><a href="ch.html#activities">业绩活动</a></li>
+            </ul>
+          </li>
+          <li><a href="location.html">联系我们</a></li>
+        </ul>
+        <div class="navbar-extras">
+          <a href="#" class="nav-icon"><img src="../../www.taylorwessing.com/assets/dist/img/icon--magnifying-glass.png" alt="search"></a>
+          <a href="#" class="nav-lang"><img src="../../www.taylorwessing.com/assets/dist/img/icon--language-check.svg" style="height:16px;vertical-align:middle;margin-right:6px">EN</a>
+        </div>
+        <button class="navbar-toggle" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation (Legacy) -->
+    <div id="searchOverlay" class="search-overlay" style="display:none;position:fixed;inset:0;background:rgba(10,14,30,0.85);z-index:120;align-items:center;justify-content:center;">
+      <div style="max-width:720px;margin:0 auto;padding:18px;background:rgba(255,255,255,0.03);border-radius:8px;">
+        <button id="searchClose" style="float:right;background:none;border:none;color:#fff;font-size:22px;">×</button>
+        <div style="padding-top:6px;">
+          <input id="searchInput" type="text" placeholder="请输入搜索内容" style="width:100%;padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;font-size:16px;" />
+          <div style="margin-top:12px;text-align:right;"><button id="searchSubmit" class="btn-tw"><img class="icon" src="../../www.taylorwessing.com/assets/dist/img/btn--right-arrow.svg" alt=""> 搜索</button></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" style="background-image: url('hero/not-ready-lumina-2-gensler_4.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; position: relative; height: 500px;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4);"></div>
+      <div class="container" style="position: relative; z-index: 10; text-align: center;">
+        <h1 style="font-size: 3.5em; margin: 0; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">贸易与海关</h1>
+        <p class="subtitle" style="font-size: 1.5em; color: #e0e0e0; margin-top: 15px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">Sofos |& Partners</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <p class="intro-text">
+          贸易与海关合规是从事进出口业务企业不可忽视的重要环节，它可以帮助确保您的跨境交易符合复杂的国际贸易规则，最大程度降低法律风险与运营中断的可能。此外，合理的贸易架构规划有助于优化关税成本，最大化您在全球市场中的竞争优势。
+        </p>
+
+        <div class="content-box">
+          <p>
+            索福思事务所将与您密切合作，确定最有效的贸易合规与海关应对方案。无论您的进出口业务涉及单一国家还是覆盖全球市场，我们都能根据您的具体情况协助您建立合规体系、应对海关稽查。此外，我们可能会运用特定的关税筹划工具与保税安排来实现各种商业目标。通过对原产地规则、归类与估值的技术性运用，我们可以帮助您在合法框架下实现多重效益。
+          </p>
+          <p>
+            我们事务所还将协助您准备出口管制与制裁合规文件。这些规划将帮助确保在面临供应链审查或监管问询时，您有清晰完备的内控制度，确保您的跨境业务稳健运行，并实现您对关键市场的战略意图。
+          </p>
+        </div>
+
+        <div class="content-box">
+          <p>
+            如果您因海关执法措施或贸易伙伴违约而遭受损失，您需要一位致力于积极争取您应得救济的律师。索福思事务所将收集与您或您企业面临的贸易争端相关的所有事实和证据，并通过行政复议、司法诉讼或国际仲裁提出所有可行的主张。我们真心关心客户，愿意在这段充满不确定性的时期引领您。
+          </p>
+        </div>
+
+        <div class="content-box">
+          <p style="font-weight: 600; color: #0f3460; margin-bottom: 0;">
+            我们处理的贸易与海关事务包括以下几项：
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <ul>
+              <li>出口管制分类与许可证申请</li>
+              <li>经济制裁与禁运合规审查</li>
+              <li>海关归类、估价与原产地认定</li>
+              <li>自由贸易协定优惠利用与合规</li>
+              <li>保税仓库与对外贸易区架构设计</li>
+              <li>反倾销、反补贴及保障措施调查应对</li>
+              <li>海关稽查、罚没与行政申诉代理</li>
+              <li>供应链尽职调查与强迫劳动合规</li>
+              <li>跨境电子商务税务与合规咨询</li>
+              <li>报关行代理关系管理与争议解决</li>
+              <li>知识产权边境保护与海关备案</li>
+              <li>涉疆法案及其他特定地区进口限制应对</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          <a href="location.html" class="btn">联系我们讨论您的贸易与海关事务</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" style="background: #172a5a; padding: 50px 0; color: white;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 30px; align-items: flex-start; text-align: center;">
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:0; width: 100%; justify-content: center;">
+              <img src="img/logo/logo.png" alt="Sofos Logo" style="height:50px; object-fit:contain;" />
+              <div style="font-size: 1.3em; font-weight: 600;">
+                索福思律师事务所
+              </div>
+            </div>
+            <div style="display:flex; gap:40px; align-items:flex-start; justify-content:center; margin-top:25px; width: 100%;">
+              <div style="text-align:center;">
+                <img src="img/logo/QR_code_gao.png" alt="高律师" style="width:90px;height:90px;display:block;margin:0 auto;border-radius:6px;" />
+                <div style="font-size:1em;color:rgba(255,255,255,0.7);margin-top:8px;">高律师</div>
+              </div>
+              <div style="text-align:center;">
+                <img src="img/logo/QR_code_chen.png" alt="陈博士" style="width:90px;height:90px;display:block;margin:0 auto;border-radius:6px;" />
+                <div style="font-size:1em;color:rgba(255,255,255,0.7);margin-top:8px;">陈博士</div>
+              </div>
+            </div>
+            <p style="font-size: 1.1em; color: rgba(255,255,255,0.85); line-height: 1.8; margin: 20px auto 0 auto; font-weight: 500; letter-spacing: 0.5px; white-space: nowrap;">
+              您值得信赖的伙伴，为您提供独一无二的专业体验
+            </p>
+          </div>
+
+          <div style="text-align: left;">
+            <h4 style="color: white; font-size: 1.3em; margin: 0 0 20px 0; font-weight: 600;">执业领域</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1em;">
+              <li style="margin-bottom: 36px;"><a href="merger.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">并购与重组</a></li>
+              <li style="margin-bottom: 36px;"><a href="trade-customs.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">贸易与海关</a></li>
+              <li style="margin-bottom: 36px;"><a href="ip.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">知识产权</a></li>
+              <li style="margin-bottom: 36px;"><a href="ch.html#expertise-compliance" style="color: rgba(255,255,255,0.7); text-decoration: none;">监管与合规</a></li>
+            </ul>
+          </div>
+
+          <div style="text-align: left;">
+            <h4 style="color: white; font-size: 1.3em; margin: 0 0 20px 0; font-weight: 600;">联系方式</h4>
+            <a href="tel:+8618601636266" style="font-size: 1.1em; color: rgba(255,255,255,0.7); margin: 0 0 36px 0; display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer;">
+              <img src="img/logo/phone.webp" alt="phone" style="width: 20px; height: 20px; object-fit: contain; background-color: #172a5a; padding: 2px; border-radius: 3px;">
+              <span style="color: #a4d4f7;">（+86）186 0163 6266</span>
+            </a>
+            <a href="mailto:shanghai@sofoslaw.cn" style="font-size: 1.1em; color: rgba(255,255,255,0.7); margin: 0 0 36px 0; display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer;">
+              <img src="img/logo/mail.webp" alt="mail" style="width: 20px; height: 20px; object-fit: contain; background-color: #172a5a; padding: 2px; border-radius: 3px;">
+              <span style="color: #a4d4f7;">shanghai@sofoslaw.cn</span>
+            </a>
+            <a href="https://ditu.amap.com/place/B0HK675IRU" target="_blank" style="font-size: 1.1em; color: rgba(255,255,255,0.7); margin: 0; display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer;">
+              <img src="img/logo/adress.webp" alt="address" style="width: 20px; height: 20px; object-fit: contain; background-color: #172a5a; padding: 2px; border-radius: 3px;">
+              <span style="color: #a4d4f7;">上海市徐汇区龙文路317号</span>
+            </a>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; text-align: center;">
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.8em; margin: 0;">
+            © 2026 Sofos |& Partners Law Firm. 
+            <a href="#" style="color: #a4d4f7; text-decoration: none; margin: 0 8px;">隐私政策</a> | 
+            <a href="#" style="color: #a4d4f7; text-decoration: none; margin: 0 8px;">免责声明</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
