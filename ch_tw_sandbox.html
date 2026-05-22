@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taylor Wessing Sandbox</title>
+  <link href="../../www.taylorwessing.com/assets/dist/css/app.min.css" rel="stylesheet">
+  <style>
+    body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    .tw-sandbox-hero{height:420px;background-image:url('../../www.taylorwessing.com/assets/dist/img/body-bg.jpg');background-size:cover;background-position:center;display:flex;align-items:center}
+    .tw-sandbox-hero .inner{color:#fff;padding:30px}
+    .tw-sandbox-note{padding:10px;background:rgba(255,255,255,0.9);color:#222;margin:12px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="tw-sandbox-note">这是一个隔离沙箱，用于预览 Taylor Wessing 的样式与脚本（不会影响外部页面）。</div>
+  <header style="padding:12px 20px;display:flex;align-items:center;gap:12px">
+    <img src="../../www.taylorwessing.com/assets/dist/img/spacer-1920x794.gif" alt="logo" style="height:40px">
+    <nav style="margin-left:auto">
+      <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">People</a>
+    </nav>
+  </header>
+  <section class="tw-sandbox-hero">
+    <div class="inner container">
+      <h1>Taylor Wessing - Sandbox Preview</h1>
+      <p>样式与交互在此隔离展示。</p>
+    </div>
+  </section>
+  <script src="../../www.taylorwessing.com/assets/dist/js/jquery.tw.min.js"></script>
+  <script src="../../www.taylorwessing.com/assets/dist/js/app.min.js"></script>
+  <script>
+    // Minimal safe invocation: do not run heavy global initializers
+    console.log('TW sandbox loaded');
+  </script>
+</body>
+</html>

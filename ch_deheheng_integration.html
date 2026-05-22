@@ -1,0 +1,113 @@
+<!-- Demo file: ch_deheheng_integration.html
+     Purpose: non-destructive integration demo combining elements from
+     E:\垃圾堆\deheheng.com into a copy for preview and comparison.
+     Do NOT deploy this file; it references local resources in deheheng.com.
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ch.html - Deheheng Integration Demo</title>
+
+  <!-- Local Deheheng CSS (referencing the local deheheng.com folder) -->
+  <link href="../../deheheng.com/style/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../deheheng.com/style/css/style.css" rel="stylesheet">
+  <link href="../../deheheng.com/style/css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../../deheheng.com/style/css/animate.min.css" rel="stylesheet">
+
+  <style>
+    /* Small helpers to isolate demo visuals */
+    body { font-family: "Microsoft YaHei", Arial, sans-serif; background:#fff; }
+    .demo-note { background:#fffbeb; border:1px solid #ffe08a; padding:12px; margin:12px; border-radius:6px; }
+    /* Ensure Swiper area has visible height for local preview */
+    .swiper-demo { height: 420px; }
+  </style>
+</head>
+<body>
+  <div class="demo-note">
+    说明：这是一个演示文件（ch_deheheng_integration.html），引用本地 deheheng.com 资源用于预览。不会覆盖原 ch.html。
+  </div>
+
+  <!-- --- Deheheng Navigation (copied) --- -->
+  <nav class="navbar navbar-default navbar-fixed-top nav-ty">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-ty-1">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="../../deheheng.com/style/images/logo1.png" alt="logo" style="height:36px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="nav-ty-1">
+      <div class="nav3">
+        <a href="#">首页</a>
+        <a href="#job">招聘</a>
+        <a href="https://online.deheheng.com/" target="_blank">律智荟</a>
+        <a href="#contact">联系</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#news">德和衡动态</a></li>
+        <li><a href="#areas">专业领域</a></li>
+        <li><a href="#lawyer">专业人员</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- --- Deheheng Hero (Swiper) --- -->
+  <div class="swiper infull swiper-demo">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../../deheheng.com/d/file/202401/eddb34dceb5b28ddb08f5f0cf74110ff.jpg" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="swiper-slide">
+        <img src="../../deheheng.com/d/file/202401/8f117c9ea68732fd7d6646afa57785e6.jpg" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="swiper-slide">
+        <img src="../../deheheng.com/d/file/202401/2e379897def15d64f3b4a2f6afe123ac.jpg" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- --- Minimal excerpt from ch.html for side-by-side comparison --- -->
+  <section style="padding:24px;">
+    <h2>原 ch.html 摘要（已升级版）</h2>
+    <p>导航、Hero、卡片设计及交互已在 ch.html 中升级。此处展示为对比预览区。</p>
+    <p><a href="ch.html">打开原始 ch.html</a>（保持不变）</p>
+  </section>
+
+  <!-- Include Deheheng scripts (local) -->
+  <script src="../../deheheng.com/style/js/jquery.min.js"></script>
+  <script src="../../deheheng.com/style/js/bootstrap.min.js"></script>
+  <script src="../../deheheng.com/style/js/swiper-bundle.min.js"></script>
+  <script src="../../deheheng.com/style/js/swiper.animate1.0.3.min.js"></script>
+  <script src="../../deheheng.com/style/js/smooth-scroll.min.js"></script>
+  <script src="../../deheheng.com/style/js/main.js"></script>
+  <script>
+    // Initialize a basic Swiper for demo preview, try to run swiperAnimate if available
+    try {
+      var demoSwiper = new Swiper('.infull', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        on: {
+          init: function() {
+            if (typeof swiperAnimateCache === 'function') swiperAnimateCache(this);
+            if (typeof swiperAnimate === 'function') swiperAnimate(this);
+          },
+          slideChangeTransitionEnd: function() {
+            if (typeof swiperAnimate === 'function') swiperAnimate(this);
+          }
+        }
+      });
+    } catch (e) {
+      console.warn('Swiper init failed (missing local resources?):', e);
+    }
+  </script>
+
+</body>
+</html>
